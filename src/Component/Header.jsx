@@ -25,8 +25,16 @@ const Header = () => {
             </svg>
             <p>MovieScope</p>
           </div>
-          <div className="navbar"></div>
-          <div className="seracbar"></div>
+          <div className="navbar">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="#Movies">Movies</a></li>
+                <li><a href="#AboutUs">About Us</a></li>
+            </ul>
+          </div>
+          <div className="seracbar">
+            <input type="text" placeholder='Movies Name' />
+          </div>
         </div>
       </header>
     </>
