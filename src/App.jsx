@@ -1,11 +1,13 @@
-import Header from "./Component/Header"
+import Header from "./Components/Header"
+import { HeroSection } from "./Components/HeroSection"
 
 
 const  App = () => {
 
   return (
     <>
-      <Header />
+        <Header/>
+        <HeroSection />
     </>
   )
 }
