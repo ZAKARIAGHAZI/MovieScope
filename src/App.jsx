@@ -1,6 +1,7 @@
 import Header from "./Components/Header"
 import { HeroSection } from "./Components/HeroSection"
-
+import Movies from "./Components/Movies"
+import './App.css'
 
 const  App = () => {
 
@@ -8,6 +9,7 @@ const  App = () => {
     <>
         <Header/>
         <HeroSection />
+        <Movies />
     </>
   )
 }
