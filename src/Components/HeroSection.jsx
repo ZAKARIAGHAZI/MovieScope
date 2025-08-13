@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom"
 import { api } from "./api";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
@@ -13,6 +14,8 @@ import "../Styles/HeroSection.css";
 export const HeroSection = () => {
   const [data, setData] = useState([]);
   const [heroHeight, setHeroHeight] = useState("100vh");
+  const navigate = useNavigate();
+
 
   useEffect(() => {
     const header = document.querySelector("header");
@@ -27,7 +30,7 @@ export const HeroSection = () => {
       .then((res) => setData(res.data.results))
       .catch((err) => console.log(err));
   }, []);
-
+  
   return (
     <section className="hero-section" style={{ height: heroHeight }}>
       <div className="hero_container">
@@ -60,7 +63,8 @@ export const HeroSection = () => {
                   </p>
                 </div>
                 <p className="overview">{item.overview}</p>
-                <button className="details-btn">View Details</button>
+                <button className="details-btn" onClick={()=>navigate(`/movies/${item.id}`)
+                }>View Details</button>
               </div>
             </SwiperSlide>
           ))}

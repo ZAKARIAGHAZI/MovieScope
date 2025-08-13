@@ -1,22 +1,24 @@
 import Header from "./Components/Header"
 import { HeroSection } from "./Components/HeroSection"
-import { Routes, Route, useLocation } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import Movies from "./Components/Movies"
 import './App.css'
 import Footer from "./Components/Footer"
+import MovieDeatails from "./Pages/MovieDeatails";
 
 const  App = () => {
-
-   const location = useLocation();
-   const isHome = location.pathname === "/";
 
   return (
     <>
       <Header />
-      {isHome && <HeroSection />}
-      {isHome && <Movies />}
       <Routes>
+        <Route path="/" element={<>
+        <HeroSection />
+        <Movies />
+        </>
+      } />
         <Route path="/movies" element={<Movies />} />
+        <Route path="/movies/:id" element={<MovieDeatails />} />
       </Routes>
 
       <Footer />

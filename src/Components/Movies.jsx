@@ -35,7 +35,7 @@ const Movies = () => {
   }, []);
 
   const handleMovieClick = (id) => {
-    navigate(`/movie/${id}`);
+    navigate(`/movies/${id}`);
   };
 
   const renderMovieSlides = (movies) =>
