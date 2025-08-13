@@ -3,10 +3,12 @@ import { api } from "./api";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import { FaCalendarAlt, FaGlobe, FaStar } from "react-icons/fa";
-import "../Styles/HeroSection.css";
+
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
+
+import "../Styles/HeroSection.css";
 
 export const HeroSection = () => {
   const [data, setData] = useState([]);
@@ -33,7 +35,7 @@ export const HeroSection = () => {
           modules={[Pagination, Autoplay]}
           pagination={{ dynamicBullets: true }}
           loop={data.length > 1}
-          autoplay={{ delay: 3000 }}
+          // autoplay={{ delay: 3000 }}
           className="mySwiper"
         >
           {data.map((item) => (

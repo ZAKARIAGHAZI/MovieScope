@@ -115,7 +115,7 @@ const Movies = () => {
           navigation={true}
           loop={true}
           modules={[Navigation]}
-          clasasName="mySwiper"
+          className="mySwiper"
           breakpoints={{
             320: { slidesPerView: 2 },
             768: { slidesPerView: 3 },
