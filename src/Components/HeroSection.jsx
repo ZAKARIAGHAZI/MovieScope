@@ -21,7 +21,7 @@ export const HeroSection = () => {
 
   useEffect(() => {
     api
-      .get(`/popular?api_key=${import.meta.env.VITE_API_KEY}`)
+      .get(`/movie/popular?api_key=${import.meta.env.VITE_API_KEY}`)
       .then((res) => setData(res.data.results))
       .catch((err) => console.log(err));
   }, []);
