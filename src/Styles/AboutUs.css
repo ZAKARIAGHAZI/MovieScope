@@ -1,0 +1,52 @@
+.about-us {
+  background-color: #0d0d0d;
+  color: #fff;
+  padding: 50px 20px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.about-container {
+  max-width: 900px;
+  line-height: 1.6;
+}
+
+.about-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #ff4d4d;
+}
+
+.about-container .tagline {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+.about-container p {
+  margin-bottom: 15px;
+}
+
+.mission,
+.contact {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.mission h2,
+.contact h2 {
+  color: #ff4d4d;
+}
+
+.contact a {
+  color: #ff4d4d;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}

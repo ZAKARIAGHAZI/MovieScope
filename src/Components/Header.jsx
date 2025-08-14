@@ -1,16 +1,18 @@
 import { useState } from "react";
+import { useNavigate, NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import "../Styles/Header.css";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <header>
       <div className="container">
         {/* Logo */}
-        <div className="logo">
+        <div className="logo" onClick={() => navigate("/")}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="30"
@@ -43,13 +45,19 @@ const Header = () => {
         <div className={`navbar ${isOpen ? "show" : ""}`}>
           <ul>
             <li>
-              <a href="">Home</a>
+              <NavLink to="/" onClick={() => setIsOpen(false)}>
+                Home
+              </NavLink>
             </li>
             <li>
-              <a href="#Movies">Movies</a>
+              <NavLink to="/movies" onClick={() => setIsOpen(false)}>
+                Movies
+              </NavLink>
             </li>
             <li>
-              <a href="#AboutUs">About Us</a>
+              <NavLink to="/aboutus" onClick={() => setIsOpen(false)}>
+                About Us
+              </NavLink>
             </li>
           </ul>
         </div>

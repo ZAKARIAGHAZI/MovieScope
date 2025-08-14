@@ -5,6 +5,7 @@ import Movies from "./Components/Movies"
 import './App.css'
 import Footer from "./Components/Footer"
 import MovieDeatails from "./Pages/MovieDeatails";
+import AboutUs from "./Pages/AboutUs"
 
 const  App = () => {
 
@@ -19,6 +20,7 @@ const  App = () => {
       } />
         <Route path="/movies" element={<Movies />} />
         <Route path="/movies/:id" element={<MovieDeatails />} />
+        <Route path="/aboutus" element={<AboutUs />}/>
       </Routes>
 
       <Footer />
