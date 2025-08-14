@@ -53,6 +53,10 @@ header {
   color: #ff4d4d;
 }
 
+.navbar ul li .active {
+  color: #ff4d4d;
+}
+
 /* ===== Search Bar ===== */
 .seracbar {
   position: relative;

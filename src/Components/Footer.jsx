@@ -1,4 +1,5 @@
 import { FaFacebook, FaTwitter, FaInstagram, FaGithub } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 import "../Styles/Footer.css";
 
 const Footer = () => {
@@ -14,31 +15,44 @@ const Footer = () => {
         {/* Navigation Links */}
         <ul className="footer-links">
           <li>
-            <a href="#home">Home</a>
+            <NavLink to="/">Home</NavLink>
           </li>
           <li>
-            <a href="#movies">Movies</a>
+            <NavLink to="/movies">Movies</NavLink>
           </li>
           <li>
-            <a href="#top-rated">Top Rated</a>
-          </li>
-          <li>
-            <a href="#upcoming">Upcoming</a>
+            <NavLink to="/aboutus">About Us</NavLink>
           </li>
         </ul>
 
         {/* Social Media */}
         <div className="footer-social">
-          <a href="#">
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaFacebook />
           </a>
-          <a href="#">
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaTwitter />
           </a>
-          <a href="#">
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaInstagram />
           </a>
-          <a href="#">
+          <a
+            href="https://github.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaGithub />
           </a>
         </div>
@@ -46,7 +60,7 @@ const Footer = () => {
 
       {/* Bottom text */}
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} MovieZone. All Rights Reserved.</p>
+        <p>© {new Date().getFullYear()} MovieScope. All Rights Reserved.</p>
       </div>
     </footer>
   );
