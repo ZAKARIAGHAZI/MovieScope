@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { api } from "../Components/api";
+import { api } from "../api";
 import { FaStar } from "react-icons/fa";
 import "../Styles/SearchResults.css";
 

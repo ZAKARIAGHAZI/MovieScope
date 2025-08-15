@@ -1,12 +1,121 @@
-# React + Vite
+# 🎬 MoviScope
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+MoviScope is a modern web application for discovering and searching movies. It offers a responsive interface, detailed movie pages, and an interactive carousel for featured films.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+* Display popular and recent movies
+* Search bar to find movies by title
+* Detailed page for each movie (synopsis, rating, release date)
+* Responsive design for mobile and large screens
+* Interactive carousel for featured movies
+* Smooth navigation with React Router DOM
+* **Custom favicon for the application**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠 Technologies Used
+
+* **Frontend:** React, CSS, Swiper.js
+* **HTTP Requests:** Axios
+* **External API** to fetch movie data
+* **Routing:** React Router DOM
+
+---
+
+## 📁 Project Structure
+
+```
+moviscope/
+├─ public/
+├─ src/
+│  ├─ api/           # API configuration
+│  ├─ components/    # Reusable components
+│  ├─ pages/         # Main pages (Home, MovieDetail, Search)
+│  ├─ styles/        # CSS files
+│  ├─ App.jsx
+│  └─ index.css
+│  └─ main.jsx
+├─ index.html
+├─ .gitignore
+├─ eslint.config.js
+├─ package.json
+└─ README.md
+└─ vit.config.js
+```
+
+---
+
+## ⚙️ Installation
+
+1. **Clone the repository:**
+
+```bash
+git clone https://github.com/your-username/moviscope.git
+```
+
+2. **Navigate to the project folder:**
+
+```bash
+cd moviscope
+```
+
+3. **Install dependencies:**
+
+```bash
+npm install
+```
+
+4. **Run the application:**
+
+```bash
+npm run dev
+```
+
+The application will be accessible at `http://localhost:5173` (Vite default). The SVG favicon will appear in the browser tab.
+
+---
+
+## 🚀 Usage
+
+1. **Home Page:** Displays popular movies and the featured movies carousel.
+2. **Search:** Use the search bar to find a specific movie.
+3. **Movie Details:** Click a movie to see its detail page (synopsis, rating, release date, etc.).
+4. **Navigation:** Simple menu to switch between sections.
+
+---
+
+## 🧩 Main Dependencies
+
+* `react`
+* `react-dom`
+* `react-router-dom`
+* `axios`
+* `swiper`
+* `@fortawesome/react-fontawesome` (for icons)
+
+---
+
+## 🤝 Contribution
+
+Contributions are welcome! To suggest improvements:
+
+1. Fork the project
+2. Create a branch (`git checkout -b feature/your-feature`)
+3. Commit your changes (`git commit -m 'Add a new feature'`)
+4. Push the branch (`git push origin feature/your-feature`)
+5. Open a Pull Request
+
+---
+
+## 📜 License
+
+This project is licensed under MIT. See the `LICENSE` file for details.
+
+---
+
+## 👤 Author
+
+* Zakaria Ghazi – [GitHub Profile](https://github.com/ZAKARIAGHAZI)

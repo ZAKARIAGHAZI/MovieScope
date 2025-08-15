@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom"
-import { api } from "./api";
+import { api } from "../api";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import { FaCalendarAlt, FaGlobe, FaStar } from "react-icons/fa";
