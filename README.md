@@ -30,14 +30,15 @@ MoviScope is a modern web application for discovering and searching movies. It o
 ```
 moviscope/
 ├─ public/
+│  ├─ titleIcon.svg
 ├─ src/
-│  ├─ api/           # API configuration
 │  ├─ components/    # Reusable components
 │  ├─ pages/         # Main pages (Home, MovieDetail, Search)
 │  ├─ styles/        # CSS files
 │  ├─ App.jsx
 │  └─ index.css
 │  └─ main.jsx
+├─ api
 ├─ index.html
 ├─ .gitignore
 ├─ eslint.config.js
