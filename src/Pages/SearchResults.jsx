@@ -52,7 +52,7 @@ const SearchResults = () => {
   }
 
   return (
-    <section className="movies_list">
+    <section className="movies_list_search">
       <h1>Résultats de recherche pour "{query}"</h1>
 
       {results.length > 0 ? (

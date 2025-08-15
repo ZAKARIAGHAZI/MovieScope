@@ -3,6 +3,9 @@
   padding: 2rem;
   background-color: #0d0d0d;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .movies_list h1 {
