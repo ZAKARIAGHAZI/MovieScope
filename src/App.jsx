@@ -6,6 +6,7 @@ import './App.css'
 import Footer from "./Components/Footer"
 import MovieDeatails from "./Pages/MovieDeatails";
 import AboutUs from "./Pages/AboutUs"
+import SearchResults from "./Pages/SearchResults"
 
 const  App = () => {
 
@@ -13,14 +14,19 @@ const  App = () => {
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<>
-        <HeroSection />
-        <Movies />
-        </>
-      } />
+        <Route
+          path="/"
+          element={
+            <>
+              <HeroSection />
+              <Movies />
+            </>
+          }
+        />
         <Route path="/movies" element={<Movies />} />
         <Route path="/movies/:id" element={<MovieDeatails />} />
-        <Route path="/aboutus" element={<AboutUs />}/>
+        <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/search" element={<SearchResults />} />
       </Routes>
 
       <Footer />

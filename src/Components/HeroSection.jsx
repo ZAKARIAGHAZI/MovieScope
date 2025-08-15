@@ -38,7 +38,7 @@ export const HeroSection = () => {
           modules={[Pagination, Autoplay]}
           pagination={{ dynamicBullets: true }}
           loop={data.length > 1}
-          // autoplay={{ delay: 3000 }}
+          autoplay={{ delay: 4000 }}
           className="mySwiper"
         >
           {data.map((item) => (

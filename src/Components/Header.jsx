@@ -1,12 +1,27 @@
-import { useState } from "react";
-import { useNavigate, NavLink } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useNavigate, NavLink, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import "../Styles/Header.css";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
   const navigate = useNavigate();
+  const location = useLocation();
+
+  // Clear search input whenever the route changes
+  useEffect(() => {
+    setSearchTerm("");
+  }, [location.pathname]);
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (searchTerm.trim() !== "") {
+      navigate(`/search?query=${encodeURIComponent(searchTerm)}`);
+      setIsOpen(false);
+    }
+  };
 
   return (
     <header>
@@ -31,7 +46,7 @@ const Header = () => {
           <p>MovieScope</p>
         </div>
 
-        {/* Hamburger Menu Button */}
+        {/* Hamburger Menu */}
         <div
           className={`hamburger ${isOpen ? "active" : ""}`}
           onClick={() => setIsOpen(!isOpen)}
@@ -63,10 +78,19 @@ const Header = () => {
         </div>
 
         {/* Search Bar */}
-        <div className="seracbar">
-          <FontAwesomeIcon icon={faSearch} className="search-icon" />
-          <input type="text" placeholder="Movies Name" />
-        </div>
+        <form className="seracbar" onSubmit={handleSearch}>
+          <FontAwesomeIcon
+            icon={faSearch}
+            className="search-icon"
+            onClick={handleSearch}
+          />
+          <input
+            type="text"
+            placeholder="Movies Name"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+        </form>
       </div>
     </header>
   );

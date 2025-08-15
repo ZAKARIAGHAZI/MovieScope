@@ -73,7 +73,7 @@ const Movies = () => {
           slidesPerView={4}
           spaceBetween={15}
           navigation={true}
-          loop={true}
+          loop={playingData.length > 4}
           modules={[Navigation]}
           className="mySwiper"
           breakpoints={{
@@ -93,7 +93,7 @@ const Movies = () => {
           slidesPerView={4}
           spaceBetween={15}
           navigation={true}
-          loop={true}
+          loop={upcomingData.length > 4}
           modules={[Navigation]}
           className="mySwiper"
           breakpoints={{
@@ -113,7 +113,7 @@ const Movies = () => {
           slidesPerView={4}
           spaceBetween={15}
           navigation={true}
-          loop={true}
+          loop={topRatedData.length > 4}
           modules={[Navigation]}
           className="mySwiper"
           breakpoints={{
